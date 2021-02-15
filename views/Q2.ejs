@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Q2</title>
+        <link rel="stylesheet" href="../public/css/style.css">
+    </head>
+    <body>
+        <center>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>PRODUCT</th>
+                <th>BRAND</th>
+                <th>PRICE</th>
+            </tr>
+            <% if(data.length !=0) {%>
+                <% data.forEach((details) => {%>
+                    <tr>
+                        <td><%=details.id %></td>
+                        <td><%=details.prodname%></td>
+                        <td><%=details.brand %></td>
+                        <td><%=details.price %></td>
+                    </tr>
+                    <% }); %>
+                    <% } else{ %>
+                    <tr>
+                        <td>No data found</td>
+                    </tr>
+                    <% } %> 
+        </table>
+    </center>
+    </body>
+</html>

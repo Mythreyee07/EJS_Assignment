@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Q1</title>
+        <link rel="stylesheet" href="../public/css/style.css">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Roll:no</th>
+                <th>Date of exam</th>
+                <th>M1</th>
+                <th>M2</th>
+                <th>M3</th>
+            </tr>
+            <% if(data.length!=0) { %>
+                <% data.forEach((details)=> { %>
+                    <tr>
+                        <td><%=details.name%></td>
+                        <td><%=details.roll_no%></td>
+                        <% var month=details.date_of_exam.getMonth()+1 %>
+                        <td><%=details.date_of_exam.getDate()+"/"+month+"/"+details.date_of_exam.getFullYear()%></td>
+                        <td><%=details.m1%></td>
+                        <td><%=details.m2%></td>
+                        <td><%=details.m3%></td>
+                    </tr>
+                <% });%>
+            <% } else { %>
+               <tr>
+                    <td><h1>no data found</h1></td>
+                </tr>
+                <% } %>
+        </table>
+    </body>
+</html>

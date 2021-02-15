@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Q3</title>
+        <link rel="stylesheet" href="../public/css/style.css">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>COUNTRY</th>
+                <th>HIGH</th>
+                <th>LOW</th>
+            </tr>
+            <% if (data.length!=0) { %>
+                <% data.forEach((details) => { %>
+                    <tr>
+                        <td><%= details.country %></td>
+                        <td><%= details.high %></td>
+                        <td><%= details.low %></td>
+                    </tr>
+                    <% }) %>
+            <% } else { %>
+            <tr>
+                <td >No data found</td>
+            </tr>
+            <% } %> 
+        </table>
+    </body>
+</html>
